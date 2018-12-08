@@ -5,9 +5,15 @@ N = int(input('Введите количество элементов масси
 for i in range(N):
         massive.append(int(input('Введите элементы массива последовательно ')))
 
-for i in range(len(massive) - 1):
-        if massive[i] > massive [i+1]:
-                massive[i], massive[i+1] = massive[i+1], massive[i]
+i = 0
+j = 0
+while j < N**2:
+        i = 0
+        while i < len(massive) - 1:
+                if massive[i] > massive [i+1]:
+                        massive[i], massive[i+1] = massive[i+1], massive[i]
+                i = i + 1
+                j = j + 1
 
 
 
